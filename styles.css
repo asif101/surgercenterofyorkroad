@@ -1,0 +1,325 @@
+/* ===GLOBAL=== */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 16px; 
+}
+body {
+    background: #FFFAFA;
+    /* max-width: 1440px; */
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+h3 {
+    font-family: 'Heebo', sans-serif;
+    text-transform: uppercase;
+    color: rgb(205, 205, 205);
+    font-size: 1.5em;
+    margin: 0;
+}
+p {
+    margin-top: 0px !important;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+fieldset legend {
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* ===PRIMARY=== */
+
+/* ===HEADER=== */
+header {
+    padding: 20px 20px 0;
+    position: relative;
+}
+#sc-logo {
+    max-height: 100px;
+    max-width: calc(100% - 100px);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.contact-callout {
+    text-align: right;
+    color: rgb(39, 101, 134) !important;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.contact-callout a.phone-link, 
+.contact-callout a.phone-link:visited {
+    color: rgb(39, 101, 134) !important;
+    text-decoration: none;
+}
+.contact-callout a.phone-link:hover {
+    text-decoration: underline;
+}
+.contact-callout .form-link {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 15px;
+    background: rgb(204,221,230);
+    color: #000;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.contact-callout .form-link:hover {
+    background: rgb(153,187,205);
+}
+/* ===MAIN=== */
+
+/* Introduction Section */
+section#introduction {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.hero-image.sc-room {
+    height: 500px;
+    background-image: url(./img/photos/SC_room.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 45vw;
+}
+section#introduction article {
+    padding: 2em 15%;
+    /* padding: 2em calc(30vw - 200px); */
+}
+.tagline {
+    font-size: 2em;
+    font-style: italic;
+    color: rgb(39, 101, 134);
+    margin-bottom: 20px;
+}
+/* Details Section */
+section#details {
+    font-size: 1.1rem;
+    line-height: 1.8;   
+    padding: 0 15% 2em 15%;
+}
+/* Surgery Center Section */
+section#vvi-section .feature-link {
+    display: flex;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+section#vvi-section .feature-link > * {
+    flex: 0 0 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 2em 3em;
+}
+.feature-link
+.feature-description {
+    background: rgb(39,93,118);
+    color: #fff;
+    transition: background .2s;
+}
+.feature-button {
+    background-image: url(./img/blue-triangles.JPG);
+    position: relative;
+    z-index: 1;
+}
+.feature-button::after {
+    content: '';
+    background: #fff;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity .2s;
+}
+section#vvi-section .feature-link:hover .feature-description {
+    background: rgba(39,93,118, .9);
+}
+section#vvi-section .feature-link:hover .feature-button::after {
+    opacity: .6;
+}
+#vvi-logo {
+    max-height: 125px;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+}
+
+/* Hours and Location Section */
+section#hours-and-location {
+    display: flex;
+    font-size: 1.1rem;
+    padding: 2em 15%;
+
+    /* padding: 2em calc(30vw - 200px); */
+    justify-content: center;
+}
+section#hours-and-location :not(h3) {
+    color: rgb(39, 101, 134) !important;
+    font-style: normal;
+}
+section#hours-and-location  a {
+    text-decoration: none;
+}
+section#hours-and-location  a:hover {
+    text-decoration: underline;
+}
+.hours-info {
+    margin-right: 50px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hours-info > div {
+    margin-bottom: 10px;
+}
+.location-map iframe {
+    width: 50vw;
+}
+/* ===FOOTER=== */
+#cohesion-logo {
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===CHECKBOX HACK=== */
+/* Customize the label (the container) */
+.terms-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .terms-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.4)  }
+  
+  /* On mouse-over, add a grey background color */
+  .terms-container:hover input ~ .checkmark {
+    background-color: rgba(255,255,255,.4);
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .terms-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .terms-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .terms-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /* ===POPOVER=== */
+  .popover-title {
+    color: rgb(255,253,84);    
+  }
+  .popover-title:hover {
+      text-decoration: underline;
+  }
+  .popover-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .popover-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFAFA;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    min-width: 400px;
+    color: rgb(39, 101, 134);
+  }
+  .popover-wrapper:hover .popover-content {
+    display: block;
+    z-index: 10;
+    bottom: calc(100% + 10px);
+  }
+  /* ===POPOVER=== */
+
+  @media only screen and (max-width: 980px) {
+    #vvi-logo {
+        margin-bottom: 15px;
+    }
+    .contact-callout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: initial;
+        right: initial;
+    }
+    .contact-callout .form-link {
+        margin: 0 0 0 10px;
+
+    }
+  }
+  @media only screen and (max-width: 780px) {
+    section#surgery-center .center-link > * {
+        flex-basis: 100%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    nav {
+        display: none;
+    }
+  }
