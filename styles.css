@@ -6,7 +6,7 @@ html, body {
     font-size: 16px; 
 }
 body {
-    background: #FFFAFA;
+    /* background: #FFFAFA; */
     /* max-width: 1440px; */
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
@@ -20,6 +20,10 @@ h3 {
 }
 p {
     margin-top: 0px !important;
+}
+p.text-compressed {
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 fieldset {
     border: none;
@@ -81,7 +85,6 @@ header {
     background: rgb(153,187,205);
 }
 /* ===MAIN=== */
-
 /* Introduction Section */
 section#introduction {
     text-align: center;
@@ -89,8 +92,8 @@ section#introduction {
     line-height: 1.8;
 }
 .hero-image.sc-room {
-    height: 500px;
-    background-image: url(./img/photos/SC_room.jpg);
+    height: 450px;
+    background-image: url(./img/photos/Surgery-Room.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -121,11 +124,12 @@ section#vvi-section .feature-link {
     flex-wrap: wrap;
 }
 section#vvi-section .feature-link > * {
-    flex: 0 0 50%;
+    flex: 1 0 50%;
     align-items: center;
     display: flex;
     justify-content: center;
     padding: 2em 3em;
+    min-width: 400px;
 }
 .feature-link
 .feature-description {
@@ -157,7 +161,7 @@ section#vvi-section .feature-link:hover .feature-button::after {
     opacity: .6;
 }
 #vvi-logo {
-    max-height: 125px;
+    max-height: 90px;
     position: relative;
     z-index: 3;
     max-width: 100%;
@@ -167,7 +171,7 @@ section#vvi-section .feature-link:hover .feature-button::after {
 section#hours-and-location {
     display: flex;
     font-size: 1.1rem;
-    padding: 2em 15%;
+    padding: 2em 10%;
 
     /* padding: 2em calc(30vw - 200px); */
     justify-content: center;
@@ -183,7 +187,7 @@ section#hours-and-location  a:hover {
     text-decoration: underline;
 }
 .hours-info {
-    margin-right: 50px;
+    margin-right: 30px;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -193,11 +197,11 @@ section#hours-and-location  a:hover {
     margin-bottom: 10px;
 }
 .location-map iframe {
-    width: 50vw;
+    width: 55vw;
 }
 /* ===FOOTER=== */
 #cohesion-logo {
-    max-height: 150px;
+    max-height: 115px;
     display: block;
     margin: 0 auto;
     padding: 20px;
@@ -297,8 +301,11 @@ section#hours-and-location  a:hover {
   /* ===POPOVER=== */
 
   @media only screen and (max-width: 980px) {
-    #vvi-logo {
+    #sc-logo {
         margin-bottom: 15px;
+    }
+    .hero-image {
+        margin-top: 15px;
     }
     .contact-callout {
         display: flex;
@@ -312,14 +319,46 @@ section#hours-and-location  a:hover {
         margin: 0 0 0 10px;
 
     }
+    section#introduction article, section#hours-and-location, section#contact {
+        padding: 1em 5%;
+    }
   }
-  @media only screen and (max-width: 780px) {
-    section#surgery-center .center-link > * {
+  @media only screen and (max-width: 800px) {
+    section#vvi-section .feature-link > * {
         flex-basis: 100%;
+    }
+    section#details {
+        padding: 0 5%;
+    }
+    .feature-button {
+        padding: 1.1em 3em !important;
+    }
+    #vvi-logo {
+        max-height: 75px;
     }
   }
   @media only screen and (max-width: 500px) {
     nav {
         display: none;
+    }
+    #hours-and-location {
+        flex-wrap: wrap;
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .hours-info {
+        flex-wrap: wrap;
+        margin: 0;
+        flex-direction: row;
+    }
+    .hours-info > div {
+        flex: 1 0 50%;
+    }
+    .location-map iframe {
+        width: 100%;
+    }
+    .tagline {
+        font-size: 1.7em;
+        line-height: 1.5;
     }
   }
