@@ -21,6 +21,10 @@ h3 {
 p {
     margin-top: 0px !important;
 }
+p.text-compressed {
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
 fieldset {
     border: none;
     margin: 0;
@@ -88,7 +92,7 @@ section#introduction {
     line-height: 1.8;
 }
 .hero-image.sc-room {
-    height: 400px;
+    height: 450px;
     background-image: url(./img/photos/Surgery-Room.jpg);
     background-repeat: no-repeat;
     background-position: center;
