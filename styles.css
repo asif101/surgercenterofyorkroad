@@ -103,6 +103,11 @@ section#introduction article {
     padding: 2em 15%;
     /* padding: 2em calc(30vw - 200px); */
 }
+section#introduction article p:last-child {
+    border-bottom: 1px solid rgb(191,191,191);
+    padding-bottom: 30px;
+
+}
 .tagline {
     font-size: 2em;
     font-style: italic;
