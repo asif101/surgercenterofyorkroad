@@ -14,7 +14,15 @@ function closeStatement() {
   let statement = document.getElementById('statement-modal');
   statement.classList.add("closed");
 }
+function scrollToSection(el) {
+	var check = document.getElementById('burger');
+	check.checked = false;
+	target = document.getElementById(el)
+	target.scrollIntoView({
+		behavior: "smooth"
+	});
 
+}
 //Dismiss modal when clicking outside content
 let statementContainer = document.getElementById('statement-modal');
 let statementContent = document.getElementById('statement-content');
