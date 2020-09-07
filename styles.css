@@ -86,9 +86,9 @@ nav a,
 nav a:visited {
     padding: 15px 50px;
     color: rgb(127, 127, 127);
+    text-align: center;
     text-decoration: none;
     position: relative;
-    /* transition: all .2s; */
     cursor: pointer;
     outline: none !important;
 }
@@ -540,9 +540,8 @@ label[for="burger"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
-        top: initial;
-        right: initial;
+        position: static;
+        margin: 5px 0 20px;
     }
 
     .contact-callout .form-link {
