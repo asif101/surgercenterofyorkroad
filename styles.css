@@ -201,16 +201,14 @@ section#vvi-section .feature-link {
     font-size: 1rem;
     line-height: 1.8;
     text-decoration: none;
-    flex-wrap: wrap;
 }
 
 section#vvi-section .feature-link>* {
-    flex: 1 0 50%;
+    width: 50%;
     align-items: center;
     display: flex;
     justify-content: center;
     padding: 2em 3em;
-    min-width: 400px;
 }
 
 .feature-link .feature-description {
@@ -557,10 +555,20 @@ label[for="burger"] {
     }
 }
 
-@media only screen and (max-width: 980px) {
-    section#vvi-section .feature-link>* {
-        flex-basis: 100%;
+
+@media only screen and (max-width: 800px) {
+    
+    section#vvi-section .feature-link {
+        flex-direction: column;
     }
+
+    section#vvi-section .feature-link>* {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 980px) {
 
     section#details {
         padding: 0 5%;
