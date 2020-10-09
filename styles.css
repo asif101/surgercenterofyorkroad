@@ -208,17 +208,18 @@ section#vvi-section .feature-link>* {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 2em 3em;
 }
 
 .feature-link .feature-description {
     background: rgb(39, 93, 118);
     color: #fff;
     transition: background .2s;
+    padding: 2em 3em;
 }
 
 .feature-button {
     background-image: url(./img/blue-triangles.JPG);
+    padding: 2em 1.5em;
     position: relative;
     z-index: 1;
 }
@@ -523,10 +524,6 @@ label[for="burger"] {
         margin-bottom: 15px;
     }
 
-    #vvi-logo {
-        max-width: 285px;
-    }
-
     #hamburger-sc-logo {
         display: block
     }
@@ -568,14 +565,6 @@ label[for="burger"] {
     section#vvi-section .feature-link>* {
         width: 100%;
     }
-}
-
-
-@media only screen and (max-width: 980px) {
-
-    section#details {
-        padding: 0 5%;
-    }
 
     .feature-button {
         padding: 1.1em 3em !important;
@@ -583,6 +572,16 @@ label[for="burger"] {
 
     #vvi-logo {
         max-height: 75px;
+        max-width: 285px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 980px) {
+
+    section#details {
+        padding: 0 5%;
     }
 
     label[for="burger"] {
@@ -704,9 +703,6 @@ label[for="burger"] {
         /* transition-delay: 0.3s; */
     }
 
-    #vvi-logo {
-        margin-bottom: 15px;
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -736,5 +732,3 @@ label[for="burger"] {
         line-height: 1.5;
     }
 }
-
-@media only screen and (max-width: 980px) {}
