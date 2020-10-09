@@ -549,9 +549,12 @@ label[for="burger"] {
     }
 
     section#introduction article,
-    section#hours-and-location,
     section#contact {
         padding: 1em 5%;
+    }
+
+    section#hours-and-location {
+        padding: 2em 5%;
     }
 }
 
