@@ -250,6 +250,7 @@ section#vvi-section .feature-link:hover .feature-button::after {
     position: relative;
     z-index: 3;
     max-width: 100%;
+    min-width: 1px;
 }
 
 /* Hours and Location Section */
